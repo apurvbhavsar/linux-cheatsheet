@@ -4,11 +4,29 @@
 ### Update and Upgrade server
 `sudo apt update && sudo apt -y upgrade`
 
-### Install Apache2 
-`sudo apt install apache2`
+## Apache Installation
 
-### Check apache status
-`sudo systemctl status apache2`
+- ## Install Apache2 
+  `sudo apt install apache2`
+
+- ## Check apache status
+  `sudo systemctl status apache2`
+
+## Nginx Installation
+
+- ## Install Nginx 
+  `sudo apt install nginx`
+
+- ## Check status
+  `systemctl status nginx`
+
+- ## Managing the Nginx
+  - `sudo systemctl stop nginx` Stop server
+  - `sudo systemctl start nginx` Start server
+  - `sudo systemctl restart nginx` Restart server
+  - `sudo systemctl reload nginx` Reload server
+  - `sudo systemctl disable nginx` Disable nginx server
+  - `sudo systemctl enable nginx` Enable nginx server
 
 ## Install Composer in Ubuntu Server
  - `php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`
