@@ -93,13 +93,13 @@
 
 `ssh -i "filepath.pem" username@123.123.123.001`
 
-### Github
+# Github
 
 ## Remove file from all commit
 
-# Use the below command to remove the file from all the commits. 
+### Use the below command to remove the file from all the commits. 
 `git filter-branch --tree-filter 'rm -f filepath' HEAD`
-# After that push your changes to git.
+### After that push your changes to git.
 `git push origin branch_name --force`
 
 ## Useful helper commands in Linux
