@@ -1,4 +1,4 @@
- ### Update server
+### Update server
 `sudo apt update`
 
 ### Update and Upgrade server
@@ -9,7 +9,7 @@
 - ## Install Apache2 
   `sudo apt install apache2`
 
-- ## Check apache status
+- ## Check Apache status
   `sudo systemctl status apache2`
 
 ## Nginx Installation
@@ -37,7 +37,7 @@
 
  - `php -r "unlink('composer-setup.php');"`
 
-## Mysql Installation on linux server
+## Mysql Installation on Linux server
 
 ### Install MySQL Server
 `sudo apt install mysql-server`
@@ -45,7 +45,7 @@
 ### Start Mysql Secure Installation
 `sudo mysql_secure_installation`
 
-### Start mysql service and stop mysql service
+### Start mysql service and stop MySQL service
 
 `sudo service mysql stop` To stop mysql service
 
@@ -58,16 +58,16 @@
 
 ## Install PHP
 
-`sudo apt install php`
+`sudo apt install PHP
 
 ### Install Specific version of php
 `sudo apt install php8.1`
 
-### Install php extenstion
+### Install PHP extension
 
 `sudo apt install php8.1-[extension-name]`
 
-### Install commanly used PHP extenstions
+### Install commonly used PHP extensions
 `sudo apt install php8.1-mbstring php8.1-intl php8.1-gd php8.1-common php8.1-dom php8.1-curl php8.1-xml php8.1-zip php8.1-zip`
 
 ### Check Active PHP Version
@@ -85,22 +85,30 @@
 ### To uninstall all the modules for that version
 `sudo apt remove php8.1-* `
 
-### Create PPK file from Pem file
+### Create a PPK file from the Pem file
 
 `puttygen input-file.pem -o output-file.ppk`
 
-### Connect linux server using SSH
+### Connect Linux server using SSH
 
 `ssh -i "filepath.pem" username@123.123.123.001`
 
+### Github
 
-## Useful helper commands in linux
+## Remove file from all commit
 
-### Get List of Number of line from each files
+# Use the below command to remove the file from all the commits. 
+`git filter-branch --tree-filter 'rm -f filepath' HEAD`
+# After that push your changes to git.
+`git push origin branch_name --force`
+
+## Useful helper commands in Linux
+
+### Get a List of the Number of lines from each file's
 `sudo find . -type f |grep -v "^./public" |grep -v "^./vendor" |grep -v "^./.git" |grep -v "^./node_modules"  |grep -v "^./storage" |grep -v "^./bootstrap" |grep -v "^./composer.lock" |grep -v "^./package-lock.json" |xargs wc -l > list.txt`
 
-### Get list name of each files
+### Get the list name of each file's
 `find . -type f |grep -v "^./vendor" |xargs wc -l > list.txt`
 
-### Get service name using port number. 
+### Get the service name using the port number. 
 `sudo netstat -nlpt |grep 3306`
